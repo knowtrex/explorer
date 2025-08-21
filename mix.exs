@@ -2,7 +2,7 @@ defmodule Explorer.MixProject do
   use Mix.Project
 
   @source_url "https://github.com/knowtrex/explorer"
-  @version "0.11.2-dev"
+  @version "0.11.1-knowtrex.1"
   @dev? String.ends_with?(@version, "-dev")
   @force_build? System.get_env("EXPLORER_BUILD") in ["1", "true"]
 
