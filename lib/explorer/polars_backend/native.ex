@@ -27,8 +27,6 @@ defmodule Explorer.PolarsBackend.Native do
     end
   ]
 
-  other_variants = [legacy_cpu: fn -> use_legacy end]
-
   use RustlerPrecompiled,
     otp_app: :explorer,
     version: version,
@@ -38,17 +36,11 @@ defmodule Explorer.PolarsBackend.Native do
       aarch64-unknown-linux-gnu
       aarch64-unknown-linux-musl
       x86_64-apple-darwin
-      x86_64-pc-windows-msvc
-      x86_64-pc-windows-gnu
       x86_64-unknown-linux-gnu
       x86_64-unknown-linux-musl
-      x86_64-unknown-freebsd
     ),
     variants: %{
-      "x86_64-unknown-linux-gnu" => variants_for_linux,
-      "x86_64-pc-windows-msvc" => other_variants,
-      "x86_64-pc-windows-gnu" => other_variants,
-      "x86_64-unknown-freebsd" => other_variants
+      "x86_64-unknown-linux-gnu" => variants_for_linux
     },
     # We don't use any features of newer NIF versions, so 2.15 is enough.
     nif_versions: ["2.15"],
