@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.11.1-knowtrex.1] - 2025-08-22
+
+### Fixed
+
+  * Use unique tmp file names to avoid race conditions when accessing downloaded files
+
 ## [v0.11.1] - 2025-08-17
 
 ### Added
